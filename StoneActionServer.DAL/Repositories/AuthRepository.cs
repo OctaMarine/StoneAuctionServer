@@ -21,4 +21,9 @@ public class AuthRepository : IAuthRepository
     {
         return _context.Users.FirstOrDefault(x => x.UserName == userName);
     }
+
+    public List<User> GetAllUsers()
+    {
+        return _context.Users.ToList();
+    }
 }

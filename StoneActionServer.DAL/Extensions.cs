@@ -11,7 +11,7 @@ public static class Extensions
     {
         serviceCollection.AddDbContext<AppDbContext>(options =>
         {
-            var connectionConf = configuration.GetConnectionString("PostgresConnection");
+            var connectionConf = configuration.GetConnectionString("PostgresConnectionDocker");
 
             options.LogTo(Console.WriteLine);
             options.UseNpgsql(connectionConf);

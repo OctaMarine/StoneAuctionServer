@@ -53,4 +53,9 @@ public class AuthService : IAuthService
         }
         return String.Empty;
     }
+
+    public async Task<List<User>> GetAllUsers()
+    {
+        return _authRepository.GetAllUsers();
+    }
 }
